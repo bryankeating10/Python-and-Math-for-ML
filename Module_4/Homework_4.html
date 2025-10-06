@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Homework_3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Homework_4</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7511,75 +7511,40 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3e72597d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89233035">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Homework-3">Homework 3<a class="anchor-link" href="#Homework-3">¶</a></h1>
+<h1 id="Homework-4---Stock-Data-Analysis">Homework 4 - Stock Data Analysis<a class="anchor-link" href="#Homework-4---Stock-Data-Analysis">¶</a></h1>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=274ab2ae">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=683173af">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Problem-1-NumPy-myPi(n)-comparison">Problem 1 NumPy myPi(n) comparison<a class="anchor-link" href="#Problem-1-NumPy-myPi(n)-comparison">¶</a></h2>
+<h2 id="Problem-1---IBM-Stock-Analysis">Problem 1 - IBM Stock Analysis<a class="anchor-link" href="#Problem-1---IBM-Stock-Analysis">¶</a></h2>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a3586897">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=deeba73b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Last week's function</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">myPi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Input must be non-negative."</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Input must be positive."</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">pi</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">pi</span> <span class="o">+=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Importing data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="c1"># NumPy rendition</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">numpyPi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Input must be non-negative."</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Input must be positive."</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
-        <span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c262bc29">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Test both functions</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"myPi:"</span><span class="p">,</span> <span class="n">myPi</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"numpyPi:"</span><span class="p">,</span> <span class="n">numpyPi</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">ibm_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'ibm-1.csv'</span><span class="p">)</span>
+<span class="n">ibm_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -7589,91 +7554,319 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>myPi: 3.0418396189294032
-numpyPi: 3.0418396189294024
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=39b1315b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"myPi:"</span><span class="p">,</span> <span class="n">myPi</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"numpyPi:"</span><span class="p">,</span> <span class="n">numpyPi</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>myPi: 3.140592653839794
-numpyPi: 3.140592653839792
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d7898694">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1000000</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"myPi:"</span><span class="p">,</span> <span class="n">myPi</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"numpyPi:"</span><span class="p">,</span> <span class="n">numpyPi</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>myPi: 3.1415916535897743
-numpyPi: 3.141591653589794
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3102c00a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Compare times</span>
-<span class="n">myPi_time</span> <span class="o">=</span> <span class="o">%</span><span class="k">timeit</span> -o myPi(n)
-<span class="n">numpyPi_time</span> <span class="o">=</span> <span class="o">%</span><span class="k">timeit</span> -o numpyPi(n)
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"myPi average time:"</span><span class="p">,</span> <span class="n">myPi_time</span><span class="o">.</span><span class="n">average</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"numpyPi average time:"</span><span class="p">,</span> <span class="n">numpyPi_time</span><span class="o">.</span><span class="n">average</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"NumPy version averaged"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">myPi_time</span><span class="o">.</span><span class="n">average</span> <span class="o">/</span> <span class="n">numpyPi_time</span><span class="o">.</span><span class="n">average</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="s2">"times faster than myPi."</span><span class="p">)</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Date</th>
+<th>Open</th>
+<th>High</th>
+<th>Low</th>
+<th>Close</th>
+<th>Adj Close</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>28-Dec-18</td>
+<td>109.20</td>
+<td>109.75</td>
+<td>107.55</td>
+<td>108.06</td>
+<td>82.36</td>
+<td>5,352,905</td>
+</tr>
+<tr>
+<th>1</th>
+<td>27-Dec-18</td>
+<td>105.15</td>
+<td>108.78</td>
+<td>104.66</td>
+<td>108.78</td>
+<td>82.91</td>
+<td>6,323,698</td>
+</tr>
+<tr>
+<th>2</th>
+<td>26-Dec-18</td>
+<td>103.25</td>
+<td>106.49</td>
+<td>101.28</td>
+<td>106.49</td>
+<td>81.16</td>
+<td>6,951,507</td>
+</tr>
+<tr>
+<th>3</th>
+<td>24-Dec-18</td>
+<td>105.07</td>
+<td>106.12</td>
+<td>102.77</td>
+<td>102.84</td>
+<td>78.38</td>
+<td>3,997,184</td>
+</tr>
+<tr>
+<th>4</th>
+<td>21-Dec-18</td>
+<td>107.55</td>
+<td>110.21</td>
+<td>105.58</td>
+<td>106.06</td>
+<td>80.84</td>
+<td>10,864,279</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6750fdc8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Clean data</span>
+<span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'</span><span class="si">%d</span><span class="s1">-%b-%y'</span><span class="p">)</span>
+<span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">','</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">]:</span>
+    <span class="n">ibm_df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">ibm_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Date</th>
+<th>Open</th>
+<th>High</th>
+<th>Low</th>
+<th>Close</th>
+<th>Adj Close</th>
+<th>Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-12-28</td>
+<td>109.20</td>
+<td>109.75</td>
+<td>107.55</td>
+<td>108.06</td>
+<td>82.36</td>
+<td>5352905</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-12-27</td>
+<td>105.15</td>
+<td>108.78</td>
+<td>104.66</td>
+<td>108.78</td>
+<td>82.91</td>
+<td>6323698</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-12-26</td>
+<td>103.25</td>
+<td>106.49</td>
+<td>101.28</td>
+<td>106.49</td>
+<td>81.16</td>
+<td>6951507</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2018-12-24</td>
+<td>105.07</td>
+<td>106.12</td>
+<td>102.77</td>
+<td>102.84</td>
+<td>78.38</td>
+<td>3997184</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2018-12-21</td>
+<td>107.55</td>
+<td>110.21</td>
+<td>105.58</td>
+<td>106.06</td>
+<td>80.84</td>
+<td>10864279</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dfc5cdf6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Calculating trade value</span>
+<span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Trade Value'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span> <span class="o">*</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">]</span>
+<span class="n">ibm_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s1">'$</span><span class="si">{:,.2f}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Trade Value'</span><span class="p">]})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<style type="text/css">
+</style>
+<table id="T_c0a2b">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" id="T_c0a2b_level0_col0">Date</th>
+<th class="col_heading level0 col1" id="T_c0a2b_level0_col1">Open</th>
+<th class="col_heading level0 col2" id="T_c0a2b_level0_col2">High</th>
+<th class="col_heading level0 col3" id="T_c0a2b_level0_col3">Low</th>
+<th class="col_heading level0 col4" id="T_c0a2b_level0_col4">Close</th>
+<th class="col_heading level0 col5" id="T_c0a2b_level0_col5">Adj Close</th>
+<th class="col_heading level0 col6" id="T_c0a2b_level0_col6">Volume</th>
+<th class="col_heading level0 col7" id="T_c0a2b_level0_col7">Trade Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_c0a2b_level0_row0">0</th>
+<td class="data row0 col0" id="T_c0a2b_row0_col0">2018-12-28 00:00:00</td>
+<td class="data row0 col1" id="T_c0a2b_row0_col1">$109.20</td>
+<td class="data row0 col2" id="T_c0a2b_row0_col2">$109.75</td>
+<td class="data row0 col3" id="T_c0a2b_row0_col3">$107.55</td>
+<td class="data row0 col4" id="T_c0a2b_row0_col4">$108.06</td>
+<td class="data row0 col5" id="T_c0a2b_row0_col5">82.360000</td>
+<td class="data row0 col6" id="T_c0a2b_row0_col6">5352905</td>
+<td class="data row0 col7" id="T_c0a2b_row0_col7">$578,434,914.30</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_c0a2b_level0_row1">1</th>
+<td class="data row1 col0" id="T_c0a2b_row1_col0">2018-12-27 00:00:00</td>
+<td class="data row1 col1" id="T_c0a2b_row1_col1">$105.15</td>
+<td class="data row1 col2" id="T_c0a2b_row1_col2">$108.78</td>
+<td class="data row1 col3" id="T_c0a2b_row1_col3">$104.66</td>
+<td class="data row1 col4" id="T_c0a2b_row1_col4">$108.78</td>
+<td class="data row1 col5" id="T_c0a2b_row1_col5">82.910000</td>
+<td class="data row1 col6" id="T_c0a2b_row1_col6">6323698</td>
+<td class="data row1 col7" id="T_c0a2b_row1_col7">$687,891,868.44</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_c0a2b_level0_row2">2</th>
+<td class="data row2 col0" id="T_c0a2b_row2_col0">2018-12-26 00:00:00</td>
+<td class="data row2 col1" id="T_c0a2b_row2_col1">$103.25</td>
+<td class="data row2 col2" id="T_c0a2b_row2_col2">$106.49</td>
+<td class="data row2 col3" id="T_c0a2b_row2_col3">$101.28</td>
+<td class="data row2 col4" id="T_c0a2b_row2_col4">$106.49</td>
+<td class="data row2 col5" id="T_c0a2b_row2_col5">81.160000</td>
+<td class="data row2 col6" id="T_c0a2b_row2_col6">6951507</td>
+<td class="data row2 col7" id="T_c0a2b_row2_col7">$740,265,980.43</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_c0a2b_level0_row3">3</th>
+<td class="data row3 col0" id="T_c0a2b_row3_col0">2018-12-24 00:00:00</td>
+<td class="data row3 col1" id="T_c0a2b_row3_col1">$105.07</td>
+<td class="data row3 col2" id="T_c0a2b_row3_col2">$106.12</td>
+<td class="data row3 col3" id="T_c0a2b_row3_col3">$102.77</td>
+<td class="data row3 col4" id="T_c0a2b_row3_col4">$102.84</td>
+<td class="data row3 col5" id="T_c0a2b_row3_col5">78.380000</td>
+<td class="data row3 col6" id="T_c0a2b_row3_col6">3997184</td>
+<td class="data row3 col7" id="T_c0a2b_row3_col7">$411,070,402.56</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_c0a2b_level0_row4">4</th>
+<td class="data row4 col0" id="T_c0a2b_row4_col0">2018-12-21 00:00:00</td>
+<td class="data row4 col1" id="T_c0a2b_row4_col1">$107.55</td>
+<td class="data row4 col2" id="T_c0a2b_row4_col2">$110.21</td>
+<td class="data row4 col3" id="T_c0a2b_row4_col3">$105.58</td>
+<td class="data row4 col4" id="T_c0a2b_row4_col4">$106.06</td>
+<td class="data row4 col5" id="T_c0a2b_row4_col5">80.840000</td>
+<td class="data row4 col6" id="T_c0a2b_row4_col6">10864279</td>
+<td class="data row4 col7" id="T_c0a2b_row4_col7">$1,152,265,430.74</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=55112b29">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Close price statistics</span>
+<span class="n">highest_close</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">average_close</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The average closing price was $</span><span class="si">{0:.2f}</span><span class="s1"> with a high of $</span><span class="si">{1:.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_close</span><span class="p">,</span> <span class="n">highest_close</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7686,187 +7879,13 @@ numpyPi: 3.141591653589794
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>266 ms ± 4.42 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-52.5 ms ± 560 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
-myPi average time: 0.265980999995788
-numpyPi average time: 0.0524908257149426
-NumPy version averaged 5.07 times faster than myPi.
+<pre>The average closing price was $137.64 with a high of $161.68
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8c0549f6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Problem-2:-One-Line-Manhattan-Code">Problem 2: One-Line Manhattan Code<a class="anchor-link" href="#Problem-2:-One-Line-Manhattan-Code">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d86b6c32">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">manhattan</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2c07bf74">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Test cases</span>
-<span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">manhattan</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>9
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c869ef5f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">p2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">q2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"The manhattan distance between </span><span class="si">{0}</span><span class="s2"> and </span><span class="si">{1}</span><span class="s2"> is:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">q2</span><span class="p">),</span> <span class="n">manhattan</span><span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">q2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>The manhattan distance between [-9  1  0] and [-3  4 -9] is: 18
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c307582a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">p3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">q3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"The manhattan distance between </span><span class="si">{0}</span><span class="s2"> and </span><span class="si">{1}</span><span class="s2"> is:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p3</span><span class="p">,</span> <span class="n">q3</span><span class="p">),</span> <span class="n">manhattan</span><span class="p">(</span><span class="n">p3</span><span class="p">,</span> <span class="n">q3</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>The manhattan distance between [-94  -9  81  14 -72   4  92  85  83  19] and [ 17 -70  23  91  82 -84  59 -97  18   1] is: 847
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c7d08f3">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Problem-3:-One-Line-Correlation-Code">Problem 3: One-Line Correlation Code<a class="anchor-link" href="#Problem-3:-One-Line-Correlation-Code">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d36589c9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">correlation</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ac495841">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Random test</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"The correlation between /n </span><span class="si">{0}</span><span class="s2"> and </span><span class="si">{1}</span><span class="s2"> is:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">correlation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>The correlation between /n [0.59704795 0.30941056 0.20589386 0.39367644 0.33459662 0.05798345
- 0.82764836 0.23262542 0.43373925 0.09739228] and [0.74447525 0.65244121 0.11844665 0.98023587 0.37252373 0.18505858
- 0.66361149 0.48118084 0.45766938 0.45924076] is: 0.5760790521683852
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=26dc6f2b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a4653e12">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7874,10 +7893,10 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Artificially correlated data</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="mf">0.7</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"The correlation between /n </span><span class="si">{0}</span><span class="s2"> and </span><span class="si">{1}</span><span class="s2"> is:"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">correlation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Days above average close</span>
+<span class="n">above_avg</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">average_close</span><span class="p">]</span>
+<span class="n">above_avg</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s1">'$</span><span class="si">{:,.2f}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Trade Value'</span><span class="p">]})</span>
 </pre></div>
 </div>
 </div>
@@ -7887,29 +7906,209 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>The correlation between /n [-1.22475534 -0.70473031  1.20350096  0.24843725  0.66831527  0.0419887
- -0.27831941  1.17608576 -0.60382708 -1.18409159] and [-2.39017324 -1.75623712  3.32197381  0.91296601  1.7031003  -0.38270057
- -1.51747587  3.30626928 -2.15531731 -1.72316253] is: 0.9603178536418016
-</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<style type="text/css">
+</style>
+<table id="T_365cd">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" id="T_365cd_level0_col0">Date</th>
+<th class="col_heading level0 col1" id="T_365cd_level0_col1">Open</th>
+<th class="col_heading level0 col2" id="T_365cd_level0_col2">High</th>
+<th class="col_heading level0 col3" id="T_365cd_level0_col3">Low</th>
+<th class="col_heading level0 col4" id="T_365cd_level0_col4">Close</th>
+<th class="col_heading level0 col5" id="T_365cd_level0_col5">Adj Close</th>
+<th class="col_heading level0 col6" id="T_365cd_level0_col6">Volume</th>
+<th class="col_heading level0 col7" id="T_365cd_level0_col7">Trade Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_365cd_level0_row0">50</th>
+<td class="data row0 col0" id="T_365cd_row0_col0">2018-10-16 00:00:00</td>
+<td class="data row0 col1" id="T_365cd_row0_col1">$136.64</td>
+<td class="data row0 col2" id="T_365cd_row0_col2">$139.05</td>
+<td class="data row0 col3" id="T_365cd_row0_col3">$135.35</td>
+<td class="data row0 col4" id="T_365cd_row0_col4">$138.74</td>
+<td class="data row0 col5" id="T_365cd_row0_col5">104.410000</td>
+<td class="data row0 col6" id="T_365cd_row0_col6">9095493</td>
+<td class="data row0 col7" id="T_365cd_row0_col7">$1,261,908,698.82</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_365cd_level0_row1">55</th>
+<td class="data row1 col0" id="T_365cd_row1_col0">2018-10-09 00:00:00</td>
+<td class="data row1 col1" id="T_365cd_row1_col1">$141.57</td>
+<td class="data row1 col2" id="T_365cd_row1_col2">$141.84</td>
+<td class="data row1 col3" id="T_365cd_row1_col3">$140.47</td>
+<td class="data row1 col4" id="T_365cd_row1_col4">$140.76</td>
+<td class="data row1 col5" id="T_365cd_row1_col5">105.940000</td>
+<td class="data row1 col6" id="T_365cd_row1_col6">3809950</td>
+<td class="data row1 col7" id="T_365cd_row1_col7">$536,288,562.00</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_365cd_level0_row2">56</th>
+<td class="data row2 col0" id="T_365cd_row2_col0">2018-10-08 00:00:00</td>
+<td class="data row2 col1" id="T_365cd_row2_col1">$141.97</td>
+<td class="data row2 col2" id="T_365cd_row2_col2">$142.51</td>
+<td class="data row2 col3" id="T_365cd_row2_col3">$140.71</td>
+<td class="data row2 col4" id="T_365cd_row2_col4">$141.86</td>
+<td class="data row2 col5" id="T_365cd_row2_col5">106.760000</td>
+<td class="data row2 col6" id="T_365cd_row2_col6">3388308</td>
+<td class="data row2 col7" id="T_365cd_row2_col7">$480,665,372.88</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_365cd_level0_row3">57</th>
+<td class="data row3 col0" id="T_365cd_row3_col0">2018-10-05 00:00:00</td>
+<td class="data row3 col1" id="T_365cd_row3_col1">$144.26</td>
+<td class="data row3 col2" id="T_365cd_row3_col2">$145.11</td>
+<td class="data row3 col3" id="T_365cd_row3_col3">$141.37</td>
+<td class="data row3 col4" id="T_365cd_row3_col4">$142.48</td>
+<td class="data row3 col5" id="T_365cd_row3_col5">107.230000</td>
+<td class="data row3 col6" id="T_365cd_row3_col6">4813901</td>
+<td class="data row3 col7" id="T_365cd_row3_col7">$685,884,614.48</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_365cd_level0_row4">58</th>
+<td class="data row4 col0" id="T_365cd_row4_col0">2018-10-04 00:00:00</td>
+<td class="data row4 col1" id="T_365cd_row4_col1">$145.02</td>
+<td class="data row4 col2" id="T_365cd_row4_col2">$146.08</td>
+<td class="data row4 col3" id="T_365cd_row4_col3">$143.75</td>
+<td class="data row4 col4" id="T_365cd_row4_col4">$144.66</td>
+<td class="data row4 col5" id="T_365cd_row4_col5">108.870000</td>
+<td class="data row4 col6" id="T_365cd_row4_col6">4432843</td>
+<td class="data row4 col7" id="T_365cd_row4_col7">$641,255,068.38</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=146fb134">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Convert to Japanese Yen</span>
+<span class="n">yen_per_usd</span> <span class="o">=</span> <span class="mi">107</span>
+<span class="n">yen_df</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">,</span> <span class="s1">'Trade Value'</span><span class="p">]:</span>
+    <span class="n">yen_df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">yen_df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">*</span> <span class="n">yen_per_usd</span>
+
+<span class="c1"># Display in yen format but keep numeric values</span>
+<span class="n">yen_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s2">"¥</span><span class="si">{:,.2f}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span><span class="s1">'High'</span><span class="p">,</span><span class="s1">'Low'</span><span class="p">,</span><span class="s1">'Close'</span><span class="p">,</span><span class="s1">'Adj Close'</span><span class="p">,</span><span class="s1">'Trade Value'</span><span class="p">]}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Date'</span><span class="p">:</span> <span class="s2">"{:</span><span class="si">%d</span><span class="s2">-%b-%y}"</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<style type="text/css">
+</style>
+<table id="T_35be6">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" id="T_35be6_level0_col0">Date</th>
+<th class="col_heading level0 col1" id="T_35be6_level0_col1">Open</th>
+<th class="col_heading level0 col2" id="T_35be6_level0_col2">High</th>
+<th class="col_heading level0 col3" id="T_35be6_level0_col3">Low</th>
+<th class="col_heading level0 col4" id="T_35be6_level0_col4">Close</th>
+<th class="col_heading level0 col5" id="T_35be6_level0_col5">Adj Close</th>
+<th class="col_heading level0 col6" id="T_35be6_level0_col6">Volume</th>
+<th class="col_heading level0 col7" id="T_35be6_level0_col7">Trade Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_35be6_level0_row0">0</th>
+<td class="data row0 col0" id="T_35be6_row0_col0">28-Dec-18</td>
+<td class="data row0 col1" id="T_35be6_row0_col1">¥11,684.40</td>
+<td class="data row0 col2" id="T_35be6_row0_col2">¥11,743.25</td>
+<td class="data row0 col3" id="T_35be6_row0_col3">¥11,507.85</td>
+<td class="data row0 col4" id="T_35be6_row0_col4">¥11,562.42</td>
+<td class="data row0 col5" id="T_35be6_row0_col5">¥8,812.52</td>
+<td class="data row0 col6" id="T_35be6_row0_col6">5352905</td>
+<td class="data row0 col7" id="T_35be6_row0_col7">¥61,892,535,830.10</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_35be6_level0_row1">1</th>
+<td class="data row1 col0" id="T_35be6_row1_col0">27-Dec-18</td>
+<td class="data row1 col1" id="T_35be6_row1_col1">¥11,251.05</td>
+<td class="data row1 col2" id="T_35be6_row1_col2">¥11,639.46</td>
+<td class="data row1 col3" id="T_35be6_row1_col3">¥11,198.62</td>
+<td class="data row1 col4" id="T_35be6_row1_col4">¥11,639.46</td>
+<td class="data row1 col5" id="T_35be6_row1_col5">¥8,871.37</td>
+<td class="data row1 col6" id="T_35be6_row1_col6">6323698</td>
+<td class="data row1 col7" id="T_35be6_row1_col7">¥73,604,429,923.08</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_35be6_level0_row2">2</th>
+<td class="data row2 col0" id="T_35be6_row2_col0">26-Dec-18</td>
+<td class="data row2 col1" id="T_35be6_row2_col1">¥11,047.75</td>
+<td class="data row2 col2" id="T_35be6_row2_col2">¥11,394.43</td>
+<td class="data row2 col3" id="T_35be6_row2_col3">¥10,836.96</td>
+<td class="data row2 col4" id="T_35be6_row2_col4">¥11,394.43</td>
+<td class="data row2 col5" id="T_35be6_row2_col5">¥8,684.12</td>
+<td class="data row2 col6" id="T_35be6_row2_col6">6951507</td>
+<td class="data row2 col7" id="T_35be6_row2_col7">¥79,208,459,906.01</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_35be6_level0_row3">3</th>
+<td class="data row3 col0" id="T_35be6_row3_col0">24-Dec-18</td>
+<td class="data row3 col1" id="T_35be6_row3_col1">¥11,242.49</td>
+<td class="data row3 col2" id="T_35be6_row3_col2">¥11,354.84</td>
+<td class="data row3 col3" id="T_35be6_row3_col3">¥10,996.39</td>
+<td class="data row3 col4" id="T_35be6_row3_col4">¥11,003.88</td>
+<td class="data row3 col5" id="T_35be6_row3_col5">¥8,386.66</td>
+<td class="data row3 col6" id="T_35be6_row3_col6">3997184</td>
+<td class="data row3 col7" id="T_35be6_row3_col7">¥43,984,533,073.92</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_35be6_level0_row4">4</th>
+<td class="data row4 col0" id="T_35be6_row4_col0">21-Dec-18</td>
+<td class="data row4 col1" id="T_35be6_row4_col1">¥11,507.85</td>
+<td class="data row4 col2" id="T_35be6_row4_col2">¥11,792.47</td>
+<td class="data row4 col3" id="T_35be6_row4_col3">¥11,297.06</td>
+<td class="data row4 col4" id="T_35be6_row4_col4">¥11,348.42</td>
+<td class="data row4 col5" id="T_35be6_row4_col5">¥8,649.88</td>
+<td class="data row4 col6" id="T_35be6_row4_col6">10864279</td>
+<td class="data row4 col7" id="T_35be6_row4_col7">¥123,292,401,089.18</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a9f28bea">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=68f8a083">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Problem-4-One-Line-Fibonnaci-Code">Problem 4 One-Line Fibonnaci Code<a class="anchor-link" href="#Problem-4-One-Line-Fibonnaci-Code">¶</a></h2>
+<h2 id="Problem-2---IBM-Dividend-Calculation">Problem 2 - IBM Dividend Calculation<a class="anchor-link" href="#Problem-2---IBM-Dividend-Calculation">¶</a></h2>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=731b094e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1261042f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7917,9 +8116,10 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span><span class="p">;</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
-<span class="n">fib</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">islice</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">accumulate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">_</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">initial</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span> <span class="n">n</span><span class="p">)]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Organize dataframe</span>
+<span class="n">ibm_df</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'Date'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">ibm_df</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ibm_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -7929,26 +8129,116 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
-</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Date</th>
+<th>Open</th>
+<th>High</th>
+<th>Low</th>
+<th>Close</th>
+<th>Adj Close</th>
+<th>Volume</th>
+<th>Trade Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-01-02</td>
+<td>147.71</td>
+<td>148.00</td>
+<td>146.79</td>
+<td>147.47</td>
+<td>107.53</td>
+<td>4395815</td>
+<td>6.482508e+08</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-01-03</td>
+<td>150.42</td>
+<td>152.78</td>
+<td>149.46</td>
+<td>151.52</td>
+<td>110.49</td>
+<td>9875914</td>
+<td>1.496398e+09</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-01-04</td>
+<td>152.63</td>
+<td>155.18</td>
+<td>152.36</td>
+<td>154.59</td>
+<td>112.72</td>
+<td>7903785</td>
+<td>1.221846e+09</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2018-01-05</td>
+<td>155.30</td>
+<td>155.74</td>
+<td>154.02</td>
+<td>155.34</td>
+<td>113.27</td>
+<td>5434807</td>
+<td>8.442429e+08</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2018-01-08</td>
+<td>155.51</td>
+<td>156.70</td>
+<td>154.59</td>
+<td>156.28</td>
+<td>113.96</td>
+<td>5478425</td>
+<td>8.561683e+08</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e6c02606">
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e8485fb8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Test cases</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate closing ratios</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ibm_df</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">ibm_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Close Ratio'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">]</span> <span class="o">/</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">]</span>
+    <span class="n">ibm_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Adj Close Ratio'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">]</span> <span class="o">/</span> <span class="n">ibm_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">]</span>
+<span class="n">ibm_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s1">'$</span><span class="si">{:,.2f}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">,</span> <span class="s1">'Trade Value'</span><span class="p">]}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Close Ratio'</span><span class="p">:</span> <span class="s1">'</span><span class="si">{:.5f}</span><span class="s1">'</span><span class="p">,</span> <span class="s1">'Adj Close Ratio'</span><span class="p">:</span> <span class="s1">'</span><span class="si">{:.5f}</span><span class="s1">'</span><span class="p">}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Date'</span><span class="p">:</span> <span class="s2">"{:</span><span class="si">%d</span><span class="s2">-%b-%y}"</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -7958,25 +8248,116 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[0, 1, 1]
-</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<style type="text/css">
+</style>
+<table id="T_13d86">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" id="T_13d86_level0_col0">Date</th>
+<th class="col_heading level0 col1" id="T_13d86_level0_col1">Open</th>
+<th class="col_heading level0 col2" id="T_13d86_level0_col2">High</th>
+<th class="col_heading level0 col3" id="T_13d86_level0_col3">Low</th>
+<th class="col_heading level0 col4" id="T_13d86_level0_col4">Close</th>
+<th class="col_heading level0 col5" id="T_13d86_level0_col5">Adj Close</th>
+<th class="col_heading level0 col6" id="T_13d86_level0_col6">Volume</th>
+<th class="col_heading level0 col7" id="T_13d86_level0_col7">Trade Value</th>
+<th class="col_heading level0 col8" id="T_13d86_level0_col8">Close Ratio</th>
+<th class="col_heading level0 col9" id="T_13d86_level0_col9">Adj Close Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_13d86_level0_row0">0</th>
+<td class="data row0 col0" id="T_13d86_row0_col0">02-Jan-18</td>
+<td class="data row0 col1" id="T_13d86_row0_col1">$147.71</td>
+<td class="data row0 col2" id="T_13d86_row0_col2">$148.00</td>
+<td class="data row0 col3" id="T_13d86_row0_col3">$146.79</td>
+<td class="data row0 col4" id="T_13d86_row0_col4">$147.47</td>
+<td class="data row0 col5" id="T_13d86_row0_col5">$107.53</td>
+<td class="data row0 col6" id="T_13d86_row0_col6">4395815</td>
+<td class="data row0 col7" id="T_13d86_row0_col7">$648,250,838.05</td>
+<td class="data row0 col8" id="T_13d86_row0_col8">nan</td>
+<td class="data row0 col9" id="T_13d86_row0_col9">nan</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_13d86_level0_row1">1</th>
+<td class="data row1 col0" id="T_13d86_row1_col0">03-Jan-18</td>
+<td class="data row1 col1" id="T_13d86_row1_col1">$150.42</td>
+<td class="data row1 col2" id="T_13d86_row1_col2">$152.78</td>
+<td class="data row1 col3" id="T_13d86_row1_col3">$149.46</td>
+<td class="data row1 col4" id="T_13d86_row1_col4">$151.52</td>
+<td class="data row1 col5" id="T_13d86_row1_col5">$110.49</td>
+<td class="data row1 col6" id="T_13d86_row1_col6">9875914</td>
+<td class="data row1 col7" id="T_13d86_row1_col7">$1,496,398,489.28</td>
+<td class="data row1 col8" id="T_13d86_row1_col8">1.02746</td>
+<td class="data row1 col9" id="T_13d86_row1_col9">1.02753</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_13d86_level0_row2">2</th>
+<td class="data row2 col0" id="T_13d86_row2_col0">04-Jan-18</td>
+<td class="data row2 col1" id="T_13d86_row2_col1">$152.63</td>
+<td class="data row2 col2" id="T_13d86_row2_col2">$155.18</td>
+<td class="data row2 col3" id="T_13d86_row2_col3">$152.36</td>
+<td class="data row2 col4" id="T_13d86_row2_col4">$154.59</td>
+<td class="data row2 col5" id="T_13d86_row2_col5">$112.72</td>
+<td class="data row2 col6" id="T_13d86_row2_col6">7903785</td>
+<td class="data row2 col7" id="T_13d86_row2_col7">$1,221,846,123.15</td>
+<td class="data row2 col8" id="T_13d86_row2_col8">1.02026</td>
+<td class="data row2 col9" id="T_13d86_row2_col9">1.02018</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_13d86_level0_row3">3</th>
+<td class="data row3 col0" id="T_13d86_row3_col0">05-Jan-18</td>
+<td class="data row3 col1" id="T_13d86_row3_col1">$155.30</td>
+<td class="data row3 col2" id="T_13d86_row3_col2">$155.74</td>
+<td class="data row3 col3" id="T_13d86_row3_col3">$154.02</td>
+<td class="data row3 col4" id="T_13d86_row3_col4">$155.34</td>
+<td class="data row3 col5" id="T_13d86_row3_col5">$113.27</td>
+<td class="data row3 col6" id="T_13d86_row3_col6">5434807</td>
+<td class="data row3 col7" id="T_13d86_row3_col7">$844,242,919.38</td>
+<td class="data row3 col8" id="T_13d86_row3_col8">1.00485</td>
+<td class="data row3 col9" id="T_13d86_row3_col9">1.00488</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_13d86_level0_row4">4</th>
+<td class="data row4 col0" id="T_13d86_row4_col0">08-Jan-18</td>
+<td class="data row4 col1" id="T_13d86_row4_col1">$155.51</td>
+<td class="data row4 col2" id="T_13d86_row4_col2">$156.70</td>
+<td class="data row4 col3" id="T_13d86_row4_col3">$154.59</td>
+<td class="data row4 col4" id="T_13d86_row4_col4">$156.28</td>
+<td class="data row4 col5" id="T_13d86_row4_col5">$113.96</td>
+<td class="data row4 col6" id="T_13d86_row4_col6">5478425</td>
+<td class="data row4 col7" id="T_13d86_row4_col7">$856,168,259.00</td>
+<td class="data row4 col8" id="T_13d86_row4_col8">1.00605</td>
+<td class="data row4 col9" id="T_13d86_row4_col9">1.00609</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2d139ebf">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=61427506">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Dividend days (based on arbitrary tolerance)</span>
+<span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span> <span class="c1"># comparison tolerance</span>
+
+<span class="n">is_div</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close Ratio'</span><span class="p">]</span> <span class="o">-</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Adj Close Ratio'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tol</span>
+<span class="n">dividends</span> <span class="o">=</span> <span class="n">ibm_df</span><span class="p">[</span><span class="n">is_div</span><span class="p">]</span>
+<span class="n">dividends</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s1">'$</span><span class="si">{:,.2f}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">,</span> <span class="s1">'Trade Value'</span><span class="p">]}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Close Ratio'</span><span class="p">:</span> <span class="s1">'</span><span class="si">{:.5f}</span><span class="s1">'</span><span class="p">,</span> <span class="s1">'Adj Close Ratio'</span><span class="p">:</span> <span class="s1">'</span><span class="si">{:.5f}</span><span class="s1">'</span><span class="p">}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Date'</span><span class="p">:</span> <span class="s2">"{:</span><span class="si">%d</span><span class="s2">-%b-%y}"</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -7986,25 +8367,115 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-</pre>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<style type="text/css">
+</style>
+<table id="T_6644a">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" id="T_6644a_level0_col0">Date</th>
+<th class="col_heading level0 col1" id="T_6644a_level0_col1">Open</th>
+<th class="col_heading level0 col2" id="T_6644a_level0_col2">High</th>
+<th class="col_heading level0 col3" id="T_6644a_level0_col3">Low</th>
+<th class="col_heading level0 col4" id="T_6644a_level0_col4">Close</th>
+<th class="col_heading level0 col5" id="T_6644a_level0_col5">Adj Close</th>
+<th class="col_heading level0 col6" id="T_6644a_level0_col6">Volume</th>
+<th class="col_heading level0 col7" id="T_6644a_level0_col7">Trade Value</th>
+<th class="col_heading level0 col8" id="T_6644a_level0_col8">Close Ratio</th>
+<th class="col_heading level0 col9" id="T_6644a_level0_col9">Adj Close Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_6644a_level0_row0">64</th>
+<td class="data row0 col0" id="T_6644a_row0_col0">05-Apr-18</td>
+<td class="data row0 col1" id="T_6644a_row0_col1">$147.65</td>
+<td class="data row0 col2" id="T_6644a_row0_col2">$148.11</td>
+<td class="data row0 col3" id="T_6644a_row0_col3">$146.60</td>
+<td class="data row0 col4" id="T_6644a_row0_col4">$147.26</td>
+<td class="data row0 col5" id="T_6644a_row0_col5">$108.43</td>
+<td class="data row0 col6" id="T_6644a_row0_col6">3331928</td>
+<td class="data row0 col7" id="T_6644a_row0_col7">$490,659,717.28</td>
+<td class="data row0 col8" id="T_6644a_row0_col8">0.99946</td>
+<td class="data row0 col9" id="T_6644a_row0_col9">0.99935</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_6644a_level0_row1">83</th>
+<td class="data row1 col0" id="T_6644a_row1_col0">02-May-18</td>
+<td class="data row1 col1" id="T_6644a_row1_col1">$138.11</td>
+<td class="data row1 col2" id="T_6644a_row1_col2">$138.45</td>
+<td class="data row1 col3" id="T_6644a_row1_col3">$135.82</td>
+<td class="data row1 col4" id="T_6644a_row1_col4">$136.19</td>
+<td class="data row1 col5" id="T_6644a_row1_col5">$100.28</td>
+<td class="data row1 col6" id="T_6644a_row1_col6">5433865</td>
+<td class="data row1 col7" id="T_6644a_row1_col7">$740,038,074.35</td>
+<td class="data row1 col8" id="T_6644a_row1_col8">0.98247</td>
+<td class="data row1 col9" id="T_6644a_row1_col9">0.98237</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_6644a_level0_row2">94</th>
+<td class="data row2 col0" id="T_6644a_row2_col0">17-May-18</td>
+<td class="data row2 col1" id="T_6644a_row2_col1">$138.15</td>
+<td class="data row2 col2" id="T_6644a_row2_col2">$138.80</td>
+<td class="data row2 col3" id="T_6644a_row2_col3">$137.45</td>
+<td class="data row2 col4" id="T_6644a_row2_col4">$138.15</td>
+<td class="data row2 col5" id="T_6644a_row2_col5">$102.85</td>
+<td class="data row2 col6" id="T_6644a_row2_col6">3292494</td>
+<td class="data row2 col7" id="T_6644a_row2_col7">$454,858,046.10</td>
+<td class="data row2 col8" id="T_6644a_row2_col8">0.99913</td>
+<td class="data row2 col9" id="T_6644a_row2_col9">0.99903</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_6644a_level0_row3">107</th>
+<td class="data row3 col0" id="T_6644a_row3_col0">06-Jun-18</td>
+<td class="data row3 col1" id="T_6644a_row3_col1">$137.99</td>
+<td class="data row3 col2" id="T_6644a_row3_col2">$138.36</td>
+<td class="data row3 col3" id="T_6644a_row3_col3">$137.23</td>
+<td class="data row3 col4" id="T_6644a_row3_col4">$138.35</td>
+<td class="data row3 col5" id="T_6644a_row3_col5">$103.00</td>
+<td class="data row3 col6" id="T_6644a_row3_col6">3368225</td>
+<td class="data row3 col7" id="T_6644a_row3_col7">$465,993,928.75</td>
+<td class="data row3 col8" id="T_6644a_row3_col8">1.00706</td>
+<td class="data row3 col9" id="T_6644a_row3_col9">1.00694</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_6644a_level0_row4">130</th>
+<td class="data row4 col0" id="T_6644a_row4_col0">10-Jul-18</td>
+<td class="data row4 col1" id="T_6644a_row4_col1">$138.15</td>
+<td class="data row4 col2" id="T_6644a_row4_col2">$139.19</td>
+<td class="data row4 col3" id="T_6644a_row4_col3">$137.92</td>
+<td class="data row4 col4" id="T_6644a_row4_col4">$138.35</td>
+<td class="data row4 col5" id="T_6644a_row4_col5">$103.00</td>
+<td class="data row4 col6" id="T_6644a_row4_col6">3950742</td>
+<td class="data row4 col7" id="T_6644a_row4_col7">$546,585,155.70</td>
+<td class="data row4 col8" id="T_6644a_row4_col8">1.00225</td>
+<td class="data row4 col9" id="T_6644a_row4_col9">1.00214</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3eb19051">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a5d61e59">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Dividend calculation</span>
+<span class="n">dividends</span><span class="p">[</span><span class="s1">'Dividend'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close Ratio'</span><span class="p">]</span> <span class="o">-</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Adj Close Ratio'</span><span class="p">])</span> <span class="o">*</span> <span class="n">ibm_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span>
+<span class="c1"># Drop unneeded columns</span>
+<span class="n">dividends</span> <span class="o">=</span> <span class="n">dividends</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Trade Value'</span><span class="p">,</span><span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">])</span>
+<span class="n">dividends</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="s1">'$</span><span class="si">{:,.2f}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">,</span> <span class="s1">'Dividend'</span><span class="p">]}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Close Ratio'</span><span class="p">:</span> <span class="s1">'</span><span class="si">{:.5f}</span><span class="s1">'</span><span class="p">,</span> <span class="s1">'Adj Close Ratio'</span><span class="p">:</span> <span class="s1">'</span><span class="si">{:.5f}</span><span class="s1">'</span><span class="p">}</span> <span class="o">|</span>
+    <span class="p">{</span><span class="s1">'Date'</span><span class="p">:</span> <span class="s2">"{:</span><span class="si">%d</span><span class="s2">-%b-%y}"</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -8016,9 +8487,333 @@ NumPy version averaged 5.07 times faster than myPi.
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229]
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\Users\Bryan Keating\AppData\Local\Temp\ipykernel_2524\1450002570.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dividends['Dividend'] = (ibm_df['Close Ratio'] - ibm_df['Adj Close Ratio']) * ibm_df['Close']
 </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<style type="text/css">
+</style>
+<table id="T_92647">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" id="T_92647_level0_col0">Date</th>
+<th class="col_heading level0 col1" id="T_92647_level0_col1">Open</th>
+<th class="col_heading level0 col2" id="T_92647_level0_col2">Close</th>
+<th class="col_heading level0 col3" id="T_92647_level0_col3">Adj Close</th>
+<th class="col_heading level0 col4" id="T_92647_level0_col4">Volume</th>
+<th class="col_heading level0 col5" id="T_92647_level0_col5">Close Ratio</th>
+<th class="col_heading level0 col6" id="T_92647_level0_col6">Adj Close Ratio</th>
+<th class="col_heading level0 col7" id="T_92647_level0_col7">Dividend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_92647_level0_row0">64</th>
+<td class="data row0 col0" id="T_92647_row0_col0">05-Apr-18</td>
+<td class="data row0 col1" id="T_92647_row0_col1">$147.65</td>
+<td class="data row0 col2" id="T_92647_row0_col2">$147.26</td>
+<td class="data row0 col3" id="T_92647_row0_col3">$108.43</td>
+<td class="data row0 col4" id="T_92647_row0_col4">3331928</td>
+<td class="data row0 col5" id="T_92647_row0_col5">0.99946</td>
+<td class="data row0 col6" id="T_92647_row0_col6">0.99935</td>
+<td class="data row0 col7" id="T_92647_row0_col7">$0.02</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_92647_level0_row1">83</th>
+<td class="data row1 col0" id="T_92647_row1_col0">02-May-18</td>
+<td class="data row1 col1" id="T_92647_row1_col1">$138.11</td>
+<td class="data row1 col2" id="T_92647_row1_col2">$136.19</td>
+<td class="data row1 col3" id="T_92647_row1_col3">$100.28</td>
+<td class="data row1 col4" id="T_92647_row1_col4">5433865</td>
+<td class="data row1 col5" id="T_92647_row1_col5">0.98247</td>
+<td class="data row1 col6" id="T_92647_row1_col6">0.98237</td>
+<td class="data row1 col7" id="T_92647_row1_col7">$0.01</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_92647_level0_row2">94</th>
+<td class="data row2 col0" id="T_92647_row2_col0">17-May-18</td>
+<td class="data row2 col1" id="T_92647_row2_col1">$138.15</td>
+<td class="data row2 col2" id="T_92647_row2_col2">$138.15</td>
+<td class="data row2 col3" id="T_92647_row2_col3">$102.85</td>
+<td class="data row2 col4" id="T_92647_row2_col4">3292494</td>
+<td class="data row2 col5" id="T_92647_row2_col5">0.99913</td>
+<td class="data row2 col6" id="T_92647_row2_col6">0.99903</td>
+<td class="data row2 col7" id="T_92647_row2_col7">$0.01</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_92647_level0_row3">107</th>
+<td class="data row3 col0" id="T_92647_row3_col0">06-Jun-18</td>
+<td class="data row3 col1" id="T_92647_row3_col1">$137.99</td>
+<td class="data row3 col2" id="T_92647_row3_col2">$138.35</td>
+<td class="data row3 col3" id="T_92647_row3_col3">$103.00</td>
+<td class="data row3 col4" id="T_92647_row3_col4">3368225</td>
+<td class="data row3 col5" id="T_92647_row3_col5">1.00706</td>
+<td class="data row3 col6" id="T_92647_row3_col6">1.00694</td>
+<td class="data row3 col7" id="T_92647_row3_col7">$0.02</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_92647_level0_row4">130</th>
+<td class="data row4 col0" id="T_92647_row4_col0">10-Jul-18</td>
+<td class="data row4 col1" id="T_92647_row4_col1">$138.15</td>
+<td class="data row4 col2" id="T_92647_row4_col2">$138.35</td>
+<td class="data row4 col3" id="T_92647_row4_col3">$103.00</td>
+<td class="data row4 col4" id="T_92647_row4_col4">3950742</td>
+<td class="data row4 col5" id="T_92647_row4_col5">1.00225</td>
+<td class="data row4 col6" id="T_92647_row4_col6">1.00214</td>
+<td class="data row4 col7" id="T_92647_row4_col7">$0.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7e4a081a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [83]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_dividends</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># Load the stock data</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="c1"># Clean data</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Date'</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'</span><span class="si">%d</span><span class="s1">-%b-%y'</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">','</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Open'</span><span class="p">,</span> <span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Close'</span><span class="p">,</span> <span class="s1">'Adj Close'</span><span class="p">]:</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+    <span class="c1"># Compute ratios</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'Close Ratio'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">'Adj Close Ratio'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Adj Close'</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Adj Close'</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Detect dividend days</span>
+    <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span>
+    <span class="n">is_div</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Close Ratio'</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Adj Close Ratio'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tol</span>
+    <span class="n">dividends</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">is_div</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Calculate dividends</span>
+    <span class="n">dividends</span><span class="p">[</span><span class="s1">'Dividend'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Close Ratio'</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Adj Close Ratio'</span><span class="p">])</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span>
+
+    <span class="c1"># Drop unneeded columns</span>
+    <span class="n">dividends</span> <span class="o">=</span> <span class="n">dividends</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'High'</span><span class="p">,</span> <span class="s1">'Low'</span><span class="p">,</span> <span class="s1">'Volume'</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">dividends</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b592ed8f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [84]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">div_aapl</span> <span class="o">=</span> <span class="n">calculate_dividends</span><span class="p">(</span><span class="s2">"aapl-1.csv"</span><span class="p">)</span>
+<span class="n">div_amzn</span> <span class="o">=</span> <span class="n">calculate_dividends</span><span class="p">(</span><span class="s2">"amzn-1.csv"</span><span class="p">)</span>
+<span class="n">div_goog</span> <span class="o">=</span> <span class="n">calculate_dividends</span><span class="p">(</span><span class="s2">"goog-1.csv"</span><span class="p">)</span>
+<span class="n">div_meta</span> <span class="o">=</span> <span class="n">calculate_dividends</span><span class="p">(</span><span class="s2">"meta-1.csv"</span><span class="p">)</span>
+<span class="n">div_msft</span> <span class="o">=</span> <span class="n">calculate_dividends</span><span class="p">(</span><span class="s2">"msft-1.csv"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=77c0c9f8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">div_aapl</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[86]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Date</th>
+<th>Open</th>
+<th>Close</th>
+<th>Adj Close</th>
+<th>Close Ratio</th>
+<th>Adj Close Ratio</th>
+<th>Dividend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>10</th>
+<td>2018-12-13</td>
+<td>42.62</td>
+<td>42.74</td>
+<td>40.86</td>
+<td>1.033116</td>
+<td>1.032861</td>
+<td>0.010869</td>
+</tr>
+<tr>
+<th>17</th>
+<td>2018-12-03</td>
+<td>46.12</td>
+<td>46.21</td>
+<td>44.18</td>
+<td>1.046185</td>
+<td>1.045928</td>
+<td>0.011884</td>
+</tr>
+<tr>
+<th>20</th>
+<td>2018-11-28</td>
+<td>44.18</td>
+<td>45.24</td>
+<td>43.25</td>
+<td>1.007797</td>
+<td>1.007689</td>
+<td>0.004891</td>
+</tr>
+<tr>
+<th>26</th>
+<td>2018-11-19</td>
+<td>47.50</td>
+<td>46.47</td>
+<td>44.43</td>
+<td>1.050407</td>
+<td>1.050106</td>
+<td>0.013965</td>
+</tr>
+<tr>
+<th>29</th>
+<td>2018-11-14</td>
+<td>48.47</td>
+<td>46.70</td>
+<td>44.65</td>
+<td>0.975967</td>
+<td>0.975743</td>
+<td>0.010440</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>234</th>
+<td>2018-01-24</td>
+<td>44.31</td>
+<td>43.56</td>
+<td>41.03</td>
+<td>1.018233</td>
+<td>1.018114</td>
+<td>0.005169</td>
+</tr>
+<tr>
+<th>237</th>
+<td>2018-01-19</td>
+<td>44.65</td>
+<td>44.62</td>
+<td>42.03</td>
+<td>1.008362</td>
+<td>1.008155</td>
+<td>0.009198</td>
+</tr>
+<tr>
+<th>239</th>
+<td>2018-01-17</td>
+<td>44.04</td>
+<td>44.78</td>
+<td>42.18</td>
+<td>0.999331</td>
+<td>0.999053</td>
+<td>0.012445</td>
+</tr>
+<tr>
+<th>242</th>
+<td>2018-01-11</td>
+<td>43.65</td>
+<td>43.82</td>
+<td>41.28</td>
+<td>0.989835</td>
+<td>0.989691</td>
+<td>0.006327</td>
+</tr>
+<tr>
+<th>245</th>
+<td>2018-01-08</td>
+<td>43.59</td>
+<td>43.59</td>
+<td>41.06</td>
+<td>1.000229</td>
+<td>1.000000</td>
+<td>0.010002</td>
+</tr>
+</tbody>
+</table>
+<p>64 rows × 7 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a373cae0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 </div>
 </div>
 </div>
